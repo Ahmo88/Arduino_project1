@@ -21,7 +21,7 @@ NexTouch *nex_listen_list[] = {
   NULL
 };
 
-//DEVECTO COUNTER
+// COUNTER
 int ir_pin = 8;
 int counter2 = 0;
 bool hitObject = false;
@@ -45,8 +45,8 @@ int devectoButton = 22;
 int limitSwitch = 3;
 
 
-//DEVECTO
-String presentation = "Devect_oy";
+//PRESENTATION
+String presentation = "Presentation";
 
 
 //LEDS/LAMPS
@@ -134,7 +134,7 @@ void loop() {
   //waiting for touch
   nexLoop(nex_listen_list);
 
-  //----------DEVECTO COUNTER-----------
+  //----------COUNTER-----------
 
   int val = digitalRead(ir_pin);
 
@@ -142,7 +142,7 @@ void loop() {
     counter2++;
     hitObject = true;
 
-    //Serial.print("Devecto = ");
+    //Serial.print("Counter = ");
     //Serial.println( counter2);
 
     Serial2.print("n0.val=");
@@ -161,7 +161,7 @@ void loop() {
     }
 
   }
-  //  ----------DEVECTO BUTTON------------
+  //  ----------BUTTON------------
   //Serial.println( digitalRead(devectoButton));
   if (digitalRead( devectoButton) == LOW)
   {
